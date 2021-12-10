@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Help me please</title>
+</head>
+<body>
+
+<input type="text" size="1" id="t1" maxlength="9" onkeyup="jump001(this, 't2')" />
+<input type="text" size="1" id="t2" maxlength="9" onkeyup="jump001(this, 't3')" />
+<input type="text" size="1" id="t3" maxlength="9" onkeyup="jump001(this, 't1')" />
+
+
+    <script>
+        window.onload = function()  {
+            t1.value = "";
+            t2.value = "";
+            t3.value = "";
+        }
+function jump001(field, autoMove)   {
+    if (field.value.length >= field.maxLength)   {
+        document.getElementById(autoMove).focus();
+    }
+}
+
+
+    </script>
+</body>
+</html>
